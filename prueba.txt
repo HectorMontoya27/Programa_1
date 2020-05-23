@@ -1,0 +1,10 @@
+ent x,y;
+real hola;
+
+def funcion(ent h) inicio
+    si verdadero entonces
+      mientras 5 > j hacer
+        j := j + 1;
+      fin
+    fin
+fin

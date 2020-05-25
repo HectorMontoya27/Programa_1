@@ -58,29 +58,32 @@ espacios [ \t\n\r]+
 
 %%
 
-{palabras_reservadas} {printf("Encontre una palabra reservada: %s\n", yytext);}
-{identificador} {printf("Encontre un identificador: %s\n", yytext);}
-{cadena} {printf("Encontre una cadena: %s\n", yytext);}
-{caracter} {printf("Encontre un caracter: %s\n", yytext);}
-{num} {printf("Encontre un numero: %s\n", yytext);}
-{asignacion} {printf("Encontre una asignacion: %s\n", yytext);}
-{operador_relacional} {printf("Encontre un operador relacional: %s\n", yytext);}
-{operadores_aritmeticos} {printf("Encontre un operador aritmetico: %s\n", yytext);}
-{operadores_logicos} {printf("Encontre un operador logico: %s\n", yytext);}
-{boleano} {printf("Encontre un boleano: %s\n", yytext);}
-{parentesis_abre} {printf("Encontre un parentesis que abre: %s\n", yytext);}
-{parentesis_cierra} {printf("Encontre un parentesis que cierra: %s\n", yytext);}
-{corchete_abre} {printf("Encontre un corchete que abre: %s\n", yytext);}
-{corchete_cierra} {printf("Encontre un corchete que cierra: %s\n", yytext);}
-{signo_puntiacion} {printf("Encontre un signo de puntuacion: %s\n", yytext);}
-{espacios} {/* Espacios en blanco */}
-{comentarios} {/* Cometarios */}
+{palabras_reservadas}     {printf("Encontre una palabra reservada: %s\n", yytext);}
+{identificador}           {printf("Encontre un identificador: %s\n", yytext);}
+{cadena}                  {printf("Encontre una cadena: %s\n", yytext);}
+{caracter}                {printf("Encontre un caracter: %s\n", yytext);}
+{num}                     {printf("Encontre un numero: %s\n", yytext);}
+{asignacion}              {printf("Encontre una asignacion: %s\n", yytext);}
+{operador_relacional}     {printf("Encontre un operador relacional: %s\n", yytext);}
+{operadores_aritmeticos}  {printf("Encontre un operador aritmetico: %s\n", yytext);}
+{operadores_logicos}      {printf("Encontre un operador logico: %s\n", yytext);}
+{boleano}                 {printf("Encontre un boleano: %s\n", yytext);}
+{parentesis_abre}         {printf("Encontre un parentesis que abre: %s\n", yytext);}
+{parentesis_cierra}       {printf("Encontre un parentesis que cierra: %s\n", yytext);}
+{corchete_abre}           {printf("Encontre un corchete que abre: %s\n", yytext);}
+{corchete_cierra}         {printf("Encontre un corchete que cierra: %s\n", yytext);}
+{signo_puntiacion}        {printf("Encontre un signo de puntuacion: %s\n", yytext);}
+{espacios}                {/* Espacios en blanco */}
+{comentarios}             {/* Cometarios */}
 . {error(yytext);}
 
 %%
 
 /*
-
+--Nombre Funcion: error
+--Descripcion: Funcion para mandar un error lexico
+--Autor: Héctor Montoya Pérez
+--Fecha de creacion: 23 Mayo 2020
 */
 void error(char *s){
     printf("Error lexico: %s, en la linea %d\n",s,yylineno);

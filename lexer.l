@@ -18,7 +18,7 @@ ent [Ee][Nn][Tt]
 real [Rr][Ee][Aa][Ll]
 dreal [Dd][Rr][Ee][Aa][Ll]
 car [Cc][Aa][Rr]
-sin [Ss][In][Nn]
+sin [Ss][Ii][Nn]
 def [Dd][Ee][Ff]
 si [Ss][Ii]
 entonces [Ee][Nn][Tt][Oo][Nn][Cc][Ee][Ss]
@@ -45,7 +45,7 @@ num [0-9]+
 caracter ‘[a-zA-Z]’
 /* OPERADORES */
 operador_relacional ">"|"<"|">="|"<="|"="|"<>"
-operadores_aritmeticos "+"|"-"|"*"|"/"|"%x|{no}
+operadores_aritmeticos "+"|"-"|"*"|"/"|"%"|{no}
 boleano {verdadero}|{falso}
 parentesis_abre "("
 parentesis_cierra ")"
@@ -66,7 +66,6 @@ espacios [ \t\n\r]+
 {asignacion}              {printf("Encontre una asignacion: %s\n", yytext);}
 {operador_relacional}     {printf("Encontre un operador relacional: %s\n", yytext);}
 {operadores_aritmeticos}  {printf("Encontre un operador aritmetico: %s\n", yytext);}
-{operadores_logicos}      {printf("Encontre un operador logico: %s\n", yytext);}
 {boleano}                 {printf("Encontre un boleano: %s\n", yytext);}
 {parentesis_abre}         {printf("Encontre un parentesis que abre: %s\n", yytext);}
 {parentesis_cierra}       {printf("Encontre un parentesis que cierra: %s\n", yytext);}

@@ -6,7 +6,7 @@ estructura inicio
   dreal otro;
 fin m,a;
 
-def funcion(ent h, real d) inicio
+def sin funcion(ent h, real d) inicio
     si verdadero entonces
       mientras 5 > j hacer
         j := j + 1;
